@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Weather API</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h3>Confira o clima de uma cidade:</h3>
+            <div class="forn-input-container">
+                <form>
+                    <input type="text" placeholder="Digite o nome de uma cidade" id="city-input" required>
+                    <button id="search">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="error-message">
+            <h4>Não foi possivel encontrar uma cidade com o nome digitado...</h4>
+        </div>
+
+        <div class="loading">
+            <span></span>
+        </div>
+        <div id="weather-data">
+            <h2>
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="city"></span>
+                <img src="https://www.countryflagicons.com/FLAT/64/BR.png" alt="Imagem do país" id="country">
+            </h2>
+            <p id="temperature"><span></span>&deg;C</p>
+            <div id="description-container">
+                <p id="description"></p>
+                <img src="http://openweathermap.org/img/wn/01d.png" alt="Condicao do tempo" id="weather-icon">
+            </div>
+            <div id="details-container">
+                <p id="humidity">
+                    <i class="fa-solid fa-droplet"></i>
+                    <span>5%</span>
+                </p>
+                <p id="wind">
+                    <i class="fa-solid fa-wind"></i>
+                    <span>1km/h</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
